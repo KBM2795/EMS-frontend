@@ -39,22 +39,43 @@ const Login = () => {
   };
 
   return (
-    <div className="flex h-screen">
-      {/* Left Panel */}
-      <div className="w-1/2 flex flex-col justify-center items-center bg-gray-100 p-10">
+    <div className="flex flex-col md:flex-row h-screen">
+      {/* Background Image - Hidden on mobile but visible as background */}
+      <div 
+        className="hidden md:block md:w-1/2 flex-col justify-center items-center bg-gray-100 p-10"
+      >
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-700">EM System : Better Task Management</h1>
-          <img src="https://pixelwibes.com/template/my-task/html/dist/assets/images/login-img.svg" alt="Task Board" className="mt-6 w-72 ml-24" />
+          <img 
+            src="https://pixelwibes.com/template/my-task/html/dist/assets/images/login-img.svg" 
+            alt="Task Board" 
+            className="mt-6 w-72 mx-auto" 
+          />
         </div>
       </div>
 
-      {/* Right Panel */}
-      <div className="w-1/2 flex flex-col justify-center items-center bg-purple-900 p-10 text-white rounded-l-lg">
-        <div className="w-80 p-8 bg-white shadow-lg rounded-lg text-gray-900">
+      {/* Login Form - Full width on mobile */}
+      <div 
+        className="w-full md:w-1/2 flex flex-col justify-center items-center bg-purple-900 p-4 md:p-10 text-white md:rounded-l-lg min-h-screen md:min-h-0"
+        style={{
+          backgroundImage: "url('https://pixelwibes.com/template/my-task/html/dist/assets/images/login-img.svg')",
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundBlendMode: "soft-light"
+        }}
+      >
+        <div className="w-full max-w-md p-6 md:p-8 bg-white shadow-lg rounded-lg text-gray-900">
           <h2 className="text-2xl font-bold text-center mb-4">Sign in</h2>
           <p className="text-center text-sm text-gray-600 mb-4">Free access to our dashboard</p>
 
+          {/* Mobile Only Title */}
+          <h3 className="text-center font-bold text-purple-700 mb-4 md:hidden">
+            EM System : Better Task Management
+          </h3>
+
           {error && <p className="text-red-500 text-center">{error}</p>}
+          
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium">Email Address</label>
@@ -82,8 +103,8 @@ const Login = () => {
                 />
               </div>
             </div>
-            <div className="flex justify-between items-center text-sm">
-              <label className="flex items-center">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center text-sm">
+              <label className="flex items-center mb-2 sm:mb-0">
                 <input type="checkbox" className="mr-2" /> Remember me
               </label>
               <a href="#" className="text-purple-600 hover:underline">Forgot Password?</a>
