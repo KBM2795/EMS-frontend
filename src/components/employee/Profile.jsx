@@ -43,7 +43,7 @@ const Profile = () => {
             <div className="flex-shrink-0 text-center md:text-left -mt-16">
               <div className="ring-4 ring-pink-300 rounded-full inline-block">
                 <img
-                  src={`https://ems-serverside.vercel.app/${employee.userId.profileimg}`}
+                  src={`https://raw.githubusercontent.com/KBM2795/EMS-Server/refs/heads/main/public/uploads/${employee.userId.profileimg}`}
                   alt="Profile Avatar"
                   className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-gray-700"
                 />
