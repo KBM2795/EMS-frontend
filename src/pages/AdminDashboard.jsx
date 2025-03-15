@@ -19,7 +19,7 @@ const AdminDashboard = () => {
       
       {/* Mobile Toggle Button - Only visible on small screens */}
       <button 
-        className='md:hidden fixed z-50 bottom-4 right-4 bg-purple-700 text-white p-3 rounded-full shadow-lg'
+        className='md:hidden fixed z-50 bottom-4 left-4 bg-purple-700 text-white p-3 rounded-full shadow-lg'
         onClick={toggleSidebar}
       >
         {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
