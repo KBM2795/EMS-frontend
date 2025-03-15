@@ -42,7 +42,7 @@ const Login = () => {
     <div className="flex flex-col md:flex-row h-screen">
       {/* Background Image - Hidden on mobile but visible as background */}
       <div 
-        className="hidden md:block md:w-1/2 flex-col justify-center items-center bg-gray-100 p-10"
+        className="hidden md:block md:w-1/2 flex-col mt-64 justify-center items-center bg-gray-100 p-10"
       >
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-700">EM System : Better Task Management</h1>
