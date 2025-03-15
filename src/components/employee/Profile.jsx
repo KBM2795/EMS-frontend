@@ -32,7 +32,7 @@ const Profile = () => {
 
   return (
     <>{employee ? (
-      <div className="relative left-44 top-20 h-fit  rounded-2xl bg-gray-800 p-8">
+      <div className="relative left-44 top-20 h-fit w-[60vw]  rounded-2xl bg-gray-800 p-8">
       <div className="w-full max-w-[75vw] bg-gray-700 shadow-lg rounded-2xl overflow-hidden">
         {/* Header Banner */}
         <div className="w-full h-24 bg-pink-300"></div>
