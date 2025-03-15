@@ -45,12 +45,12 @@ const Profile = () => {
                                 <img
                                     src={`https://raw.githubusercontent.com/KBM2795/EMS-Server/refs/heads/main/public/uploads/${employee.userId.profileimg}`}
                                     alt="Profile Avatar"
-                                    className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full object-cover"
+                                    className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full object-cover"
                                 />
                             </div>
                             <div className="mt-4 bg-pink-200 p-4 rounded-xl shadow-md text-center">
-                                <h2 className="text-xl font-bold text-gray-800">{employee.userId.name}</h2>
-                                <p className="text-gray-700 text-md">Employee ID: {employee.employeeId}</p>
+                                <h2 className="text-lg md:text-xl font-bold text-gray-800">{employee.userId.name}</h2>
+                                <p className="text-gray-700 text-sm md:text-md">Employee ID: {employee.employeeId}</p>
                             </div>
                         </div>
 
@@ -65,12 +65,15 @@ const Profile = () => {
                                 { label: "Marital Status", value: employee.maritalStatus || "Not Provided", icon: "💍" },
                                 { label: "Gender", value: employee.gender, icon: "⚧" },
                             ].map((item, index) => (
-                                <div key={index} className="bg-pink-200 p-4 rounded-xl shadow-md transform transition-all duration-300 hover:scale-105">
-                                    <div className="flex items-center gap-3">
-                                        <div className="bg-pink-300 p-2 rounded-lg text-2xl">{item.icon}</div>
+                                <div
+                                    key={index}
+                                    className="bg-pink-200 p-3 md:p-4 rounded-xl shadow-md transform transition-all duration-300 hover:scale-105"
+                                >
+                                    <div className="flex items-center gap-2 md:gap-3">
+                                        <div className="bg-pink-300 p-2 rounded-lg text-lg">{item.icon}</div>
                                         <div>
-                                            <p className="text-gray-700 font-medium text-sm">{item.label}</p>
-                                            <p className="text-gray-800 font-bold">{item.value}</p>
+                                            <p className="text-gray-700 font-medium text-xs md:text-sm">{item.label}</p>
+                                            <p className="text-gray-800 font-bold text-sm md:text-base">{item.value}</p>
                                         </div>
                                     </div>
                                 </div>
