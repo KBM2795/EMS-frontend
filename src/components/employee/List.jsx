@@ -30,7 +30,7 @@ const List = () => {
             dep_name: emp.department?.dep_name || "Unknown",
             sno: sno++,
             dob :new Date(emp.dob).toLocaleDateString(),
-            profileImage: <img className="w-32 rounded-[60px]" src={`https://ems-serverside.vercel.app/${emp.userId.profileimg}`} />,
+            profileImage: <img className="w-32 rounded-[60px]" src={`https://raw.githubusercontent.com/KBM2795/EMS-Server/refs/heads/main/public/uploads/${emp.userId.profileimg}`} />,
 
           })) 
 
