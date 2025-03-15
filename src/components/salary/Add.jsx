@@ -24,7 +24,7 @@ const AddSalary = () => {
     const fetchDepartments = async () => {
       setDepLoading(true);
       try {
-        const response = await axios.get('http://localhost:3000/api/department', {
+        const response = await axios.get('https://ems-serverside.vercel.app/api/department', {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
           }
@@ -53,7 +53,7 @@ const AddSalary = () => {
     if (selectedDepartment) {
       setDepLoading(true);
       try {
-        const response = await axios.get(`http://localhost:3000/api/employee/department/${selectedDepartment}`, {
+        const response = await axios.get(`https://ems-serverside.vercel.app/api/employee/department/${selectedDepartment}`, {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
           }
@@ -91,7 +91,7 @@ const AddSalary = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/salary/add',
+        'https://ems-serverside.vercel.app/api/salary/add',
         employee,
         {
           headers: {

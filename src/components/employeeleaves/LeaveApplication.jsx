@@ -16,7 +16,7 @@ const LeaveApplication = () => {
       try {
         
         const id = user._id;
-        const response = await axios.get(`http://localhost:3000/api/leave/${id}`, {
+        const response = await axios.get(`https://ems-serverside.vercel.app/api/leave/${id}`, {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
           }

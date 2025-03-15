@@ -30,7 +30,7 @@ const ApplyLeave = () => {
             try {
                 console.log(leaveData);
                 
-                const response = await axios.post('http://localhost:3000/api/leave/apply',
+                const response = await axios.post('https://ems-serverside.vercel.app/api/leave/apply',
                      leaveData, {
                         headers: {
                             "Authorization": `Bearer ${localStorage.getItem('token')}`

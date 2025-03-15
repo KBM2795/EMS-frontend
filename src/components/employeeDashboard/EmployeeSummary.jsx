@@ -20,7 +20,7 @@ const EmployeeSummary = () => {
     const fetchLeaveStatus = async () => {
       try {
          const id = user._id;
-        const response = await axios.get(`http://localhost:3000/api/leave/${id}`, {
+        const response = await axios.get(`https://ems-serverside.vercel.app/api/leave/${id}`, {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
           }
@@ -46,7 +46,7 @@ const EmployeeSummary = () => {
     const fetchSalaryStatus = async () => {
       try {
 
-        const response = await axios.get(`http://localhost:3000/api/salary/latest/${user._id}`,
+        const response = await axios.get(`https://ems-serverside.vercel.app/api/salary/latest/${user._id}`,
             {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`

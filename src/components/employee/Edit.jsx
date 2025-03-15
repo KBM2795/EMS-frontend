@@ -23,7 +23,7 @@ const Edit = () => {
 useEffect(() => {
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/employee/${id}`,{
+      const response = await axios.get(`https://ems-serverside.vercel.app/api/employee/${id}`,{
        headers:{
           "Authorization": `Bearer ${localStorage.getItem('token')}`
        }
@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
     try {
 
         const response = await axios.put(
-            `http://localhost:3000/api/employee/${id}`,
+            `https://ems-serverside.vercel.app/api/employee/${id}`,
             employee,
             {
                 headers : {
@@ -109,7 +109,7 @@ const handleSubmit = async (e) => {
           <input type="text" value={employee.designation} name="designation" onChange={handleChange} placeholder="Designation" className="border p-2 rounded" />
           <input type="text" name="salary" value={employee.salary} onChange={handleChange} placeholder="Salary" className="border p-2 rounded" />
           <img
-                src={`http://localhost:3000/${employee.userId.image}`}
+                src={`https://ems-serverside.vercel.app/${employee.userId.image}`}
                 alt="Profile Avatar"
                 className="w-20 h-20 relative left-64 rounded-full mx-auto md:mx-0 object-cover"
                 />

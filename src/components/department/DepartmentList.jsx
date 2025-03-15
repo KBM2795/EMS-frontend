@@ -19,7 +19,7 @@ const DepartmentList = () => {
       if(confirm){
       try {
         
-        const response = await axios.delete(`http://localhost:3000/api/department/${id}`,{
+        const response = await axios.delete(`https://ems-serverside.vercel.app/api/department/${id}`,{
          headers:{
             "Authorization": `Bearer ${localStorage.getItem('token')}`
          }
@@ -42,7 +42,7 @@ const DepartmentList = () => {
       const fetchDepartments = async () => {
         setDepLoading(true)
        try {
-         const response = await axios.get('http://localhost:3000/api/department',{
+         const response = await axios.get('https://ems-serverside.vercel.app/api/department',{
           headers:{
              "Authorization": `Bearer ${localStorage.getItem('token')}`
           }

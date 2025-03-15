@@ -13,7 +13,7 @@ const salary = () => {
       const fetchPayrollData = async () => {
         try {
           
-          const response = await axios.get(`http://localhost:3000/api/salary/${user._id}`, {
+          const response = await axios.get(`https://ems-serverside.vercel.app/api/salary/${user._id}`, {
             headers: {
               "Authorization": `Bearer ${localStorage.getItem('token')}`
             }

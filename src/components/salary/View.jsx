@@ -11,7 +11,7 @@ const View = () => {
   useEffect(() => {
     const fetchPayrollData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/salary/${id}`, {
+        const response = await axios.get(`https://ems-serverside.vercel.app/api/salary/${id}`, {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
           }

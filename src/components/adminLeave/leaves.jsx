@@ -18,7 +18,7 @@ const Leaves = () => {
     const fetchLeaves = async () => {
       try {
         const id = user._id;
-        const response = await axios.get(`http://localhost:3000/api/leave`, {
+        const response = await axios.get(`https://ems-serverside.vercel.app/api/leave`, {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
           }
@@ -37,7 +37,7 @@ const Leaves = () => {
 
   const handleApprove = async (leaveId) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/leave/${leaveId}`, 
+      const response = await axios.put(`https://ems-serverside.vercel.app/api/leave/${leaveId}`, 
         { status: 'Approved' },
         {
           headers: {
@@ -56,7 +56,7 @@ const Leaves = () => {
 
   const handleReject = async (leaveId) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/leave/${leaveId}`, 
+      const response = await axios.put(`https://ems-serverside.vercel.app/api/leave/${leaveId}`, 
         { status: 'Rejected' },
         {
           headers: {
